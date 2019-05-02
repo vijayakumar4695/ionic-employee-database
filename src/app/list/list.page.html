@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title  color="dark">
+     <div  class="ion-text-center"> Employee List
+      </div>
+      
+    </ion-title>
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="warning">
+  <ion-row color="warning">
+    <ion-col align-self-center size-md="12" size-lg="12" size-xs="12">
+        <div text-center>
+            <h3><i class="fas fa-users">&nbsp;</i>Employee Details</h3>
+          </div>
+         
+    <br>
+    <br>
+     
+  <table class="table table-hover" border="4">
+    <thead>
+     <tr> 
+      <th>NAME</th>
+      <th>EMAIL</th>
+      <th>ACCESS NO</th>
+      <th>LOCATION</th>
+      <th>DELETE</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of bind">
+        <td>{{list.name}}<hr class="hr1"></td>
+        <td>{{list.email}}<hr class="hr1"></td>
+        <td>{{list.Accessno}}<hr class="hr1"></td>
+        <td>{{list.location}}<hr class="hr1"></td>
+        <td><i class="fas fa-trash"(click)="del(list)"></i></td>
+        </tr>
+        </tbody>
+        </table>
+        <br>
+        <div  class="ion-text-center">
+            <ion-button color="danger"(click)="YourFancyButton()" >ADD</ion-button>
+          </div>
+        </ion-col>
+       
+      </ion-row>
+</ion-content>
